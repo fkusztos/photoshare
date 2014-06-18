@@ -1,6 +1,14 @@
 SetEnv PHP_VER 5
 SetEnv REGISTER_GLOBALS 0
 
+AuthUserFile /homez.168/kukus/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Accès Restreint"
+AuthType Basic
+<Limit GET POST>
+require valid-user
+</Limit>
+
 #
 # Apache/PHP/Drupal settings:
 #
